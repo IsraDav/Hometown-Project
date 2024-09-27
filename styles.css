@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(to bottom, #0077be, #0af, #e0f7fa);
+    height: 100vh; 
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.content, .content-bottom {
+    display: flex; 
+    align-items: flex-start; 
+    margin-top: 70px; 
+    flex-wrap: nowrap;
+}
+
+.top-left-image, .bottom-right-image {
+    width: 300px; 
+    height: auto; 
+    border-radius: 25px;
+    border: 5px solid white;
+    margin-right: 20px;
+    margin-left: 15px;
+    transform: rotate(-10deg);
+    transition: transform 2s, width 2s;
+}
+
+.top-left-image:hover, .bottom-right-image:hover {
+    transform: rotate(360deg); 
+    width: 310px; /* Slight increase for hover effect */
+}
+
+.golf-paragraph, .golf-paragraph2 {
+    margin-left: 30px; 
+    color: white; 
+}
+
+.golf-paragraph a, .golf-paragraph2 a {
+    color: white; /* Link color */
+    text-decoration: underline; /* Underline links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.golf-paragraph a:hover, .golf-paragraph2 a:hover {
+    color: #005f8c; /* Darker shade on hover */
+}
+
+.header {
+    height: auto; 
+    display: flex; 
+    background-image: url('Images/strand.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center;
+    position: relative; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    border-bottom: 5px solid white;
+    padding: 20px; 
+}
+
+h1 {
+    font-size: 6vw; 
+    margin: 0; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    margin: 0; 
+    font-size: 3vw; 
+    margin-top: 5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.footer {
+    display: flex; 
+    flex-direction: column; /* Stack items in the footer */
+    align-items: center; 
+    padding: 20px; 
+    background-image: url('Images/celebrate.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    border-top: 5px solid white; 
+}
+
+.footer-links {
+    max-width: 500px; 
+    text-align: center;
+}
+
+.footer-links p {
+    font-weight: bold; 
+    font-size: 4vw; 
+}
+
+.footer-links ul {
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; 
+}
+
+.footer-image {
+    width: 150px; 
+    height: auto;
+    margin: 20px 0; /* Added vertical margins */
+    border-radius: 15px 50px;
+    border: 5px solid whitesmoke;
+}
+
+.footer-button {
+    background-color: #0077be; 
+    color: white;
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+    margin: 5px 0; /* Add margin for spacing between buttons */
+}
+
+.footer-button:hover {
+    background-color: #005f8c; 
+}
+
+.footer-links li:not(:last-child)::after {
+    content: ""; 
+    position: absolute; 
+    right: -5px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    height: 20px; 
+    width: 2px; 
+    background-color: white; 
+}
+
+.foot-para {
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content, .content-bottom {
+        flex-direction: column; /* Change to column layout */
+        align-items: center; /* Center align items */
+        margin-top: 20px; /* Adjust margin for spacing */
+    }
+
+    h1 {
+        font-size: 8vw; 
+    }
+
+    p {
+        font-size: 4vw; 
+    }
+
+    .top-left-image, .bottom-right-image {
+        max-width: 90%;
+        transform: rotate(0deg); 
+    }
+
+    .golf-paragraph, .golf-paragraph2 {
+        margin-left: 0; /* Remove left margin for better spacing */
+        text-align: center; /* Center text */
+    }
+
+    .footer-image {
+        width: 120px; 
+    }
+
+    .footer-links {
+        padding: 0 10px; /* Add padding for mobile */
+    }
+}
